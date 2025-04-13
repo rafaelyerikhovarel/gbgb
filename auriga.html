@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Profil Auriga - TXU</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('tema.jpg');
+	  background-size: cover;
+	  background-repeat: no-repeat;
+	  background-position: center;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+    }
+    .profile-container {
+      display: flex;
+      flex-direction: row;
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+      gap: 40px;
+    }
+    .bio {
+      flex: 2;
+    }
+    .photo {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px dashed white;
+      height: 300px;
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 0;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 400;
+      margin-top: 5px;
+      color: #999;
+    }
+    .section {
+      margin-top: 20px;
+    }
+    .quote {
+      font-style: italic;
+      margin-top: 20px;
+    }
+    .close-btn {
+      display: block;
+      margin: 40px auto;
+      padding: 10px 20px;
+      background-color: #ff5e5e;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .close-btn:hover {
+      background-color: #cc0000;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <div class="bio">
+      <h1>Auriga</h1>
+      <h2>TOMORROW X TOGETHER</h2>
+
+      <div class="section">
+        <p><strong>Name:</strong> Jovan Auriga Al-adzhar</p>
+        <p><strong>Nickname:</strong> AURIGA </p>
+        <p><strong>Birthday:</strong> 05 FEBRUARI 1999 </p>
+        <p><strong>Zodiac Sign:</strong> AQUARIUS </p>
+        <p><strong>MBTI:</strong> ENFP </p>
+      </div>
+
+      <div class="section">
+        <p><strong>Hobbies:</strong> Creating things, vibing with music, designing apps, dreaming big</p>
+        <p><strong>Favorite Colors:</strong> Black, red, white </p>
+        <p><strong>Favorite Animal:</strong> cat </p>
+        <p><strong>Go-To Song:</strong> Sugar Rush Ride – keeps me alive</p>
+        <p><strong>Current Obsession:</strong> TXU universe & making it come to life</p>
+        <p><strong>Role in the Group:</strong> The mastermind behind the magic</p>
+        <p><strong>TMI:</strong></p>
+        <ul>
+          <li>I talk to my ideas like they’re alive.</li>
+          <li>I feel more creative after midnight.</li>
+          <li>I name everything (yes, even my charger has a name).</li>
+          <li>I make playlists for fictional characters.</li>
+          <li>I design apps in my head before I sleep.</li>
+        </ul>
+      </div>
+
+      <div class="section quote">
+        <p>Quote: "My mind is a universe — chaotic, colorful, and full of hidden galaxies."</p>
+        <p><strong>Moodboard Vibe:</strong> bnw vibes.</p>
+        <p><strong>Catchphrase:</strong> "Lovable."</p>
+      </div>
+    </div>
+    <div class="photo">
+      <span>FOTO MEMBER</span>
+      <!-- Ganti dengan <img src="img/auriga.jpg" alt="Auriga" style="max-width:100%; max-height:100%;"> -->
+    </div>
+  </div>
+
+  <button class="close-btn" onclick="window.location.href='index.html'">Close</button>
+</body>
+</html>

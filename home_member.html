@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Member Home - TXT Weverse GBGB</title>
+  <style>
+    body {
+      background: #111;
+      color: #eee;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+      color: #ff4d4d;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .container {
+      padding: 20px;
+    }
+    .post {
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+    .post .author {
+      font-weight: bold;
+      color: #66ff66;
+    }
+    .post .content {
+      margin-top: 10px;
+    }
+    .post .star {
+      color: gold;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <header>TXT Weverse - Member Inbox</header>
+  <div class="container" id="postsContainer">
+    <h3>Pesan untukmu:</h3>
+  </div>
+
+  <script>
+    const user = JSON.parse(localStorage.getItem("loginUser")) || {};
+    const posts = JSON.parse(localStorage.getItem("posts") || "[]");
+
+    function renderPosts() {
+      const container = document.getElementById("postsContainer");
+      posts
+        .filter(post => post.to === user.role)
+        .forEach(post => {
+          const div = document.createElement("div");
+          div.className = "post";
+          div.innerHTML = `
+            <div class="author">${post.from} ${post.isMember ? '<span class="star">⭐</span>' : ''}</div>
+            <div class="content">${post.message}</div>
+          `;
+          container.appendChild(div);
+        });
+    }
+
+    renderPosts();
+  </script>
+</body>
+</html>
